@@ -1,0 +1,2 @@
+liquibase:update -Dliquibase.url=jdbc:mysql://localhost:3306/first_db -Dliquibase.username=root -Dliquibase.password=1234
+-Dliquibase.changeLogFile=src/main/resources/db/changelog-master.xml
