@@ -5,10 +5,10 @@ insert into category_entity (id,name) values(1,"Laptop");
 insert into category_entity (id,name) values(2,"Tablette");
 insert into category_entity (id,name) values(3,"TV");
 
-insert into product_entity (id,name,price,quantity,category_id) values (1,'Dell i9',25.5,1,1);
-insert into product_entity (id,name,price,quantity,category_id) values (2,'Lenovo i7',36.6,4,1);
-insert into product_entity (id,name,price,quantity,category_id) values (3,'Pad m12',14.5,2,2);
-insert into product_entity (id,name,price,quantity,category_id) values (4,'Samsung TV',78.5,3,3);
+insert into product_entity (id,name,price,quantity,category_id,url) values (1,'Dell i9',25.5,1,1,'photo Dell i9');
+insert into product_entity (id,name,price,quantity,category_id,url) values (2,'Lenovo i7',36.6,4,1,'photo Lenovo i7');
+insert into product_entity (id,name,price,quantity,category_id,url) values (3,'Pad m12',14.5,2,2,'photo Pad m12');
+insert into product_entity (id,name,price,quantity,category_id,url) values (4,'Samsung TV',78.5,3,3, 'photo Samsung');
 
 insert into address_entity (id,street,city,number,country) values (1,'Avenue Ponty','Mons','15','Belgique');
 insert into address_entity (id,street,city,number,country) values (2,'Rue Boucher','Bruxelles','8','Belgique');
@@ -30,6 +30,6 @@ insert into role_entity (id,name) values(1,'ROLE_ADMIN');
 insert into user_roles (role_id,user_id) values(1,1);
 
 --changeset tpe:3
-insert into client_entity(id,comment_id,address_id,is_active,created_at,updated_at,email,password,username)values(1,2,2,true,now(),now(),'james@hotmail.com','$2a$10$VCtb0afUP.nWv2YOGjJ0Sedci7HKV/trVZDDIGXNUFa33/UyhKILa','james');
-insert into role_entity (id,name) values(1,'ROLE_USER');
-insert into user_roles (role_id,user_id) values(1,1);
+insert into client_entity(id,comment_id,address_id,is_active,created_at,updated_at,email,password,username)values(2,2,2,true,now(),now(),'james@hotmail.com','$2a$10$VCtb0afUP.nWv2YOGjJ0Sedci7HKV/trVZDDIGXNUFa33/UyhKILa','james');
+insert into role_entity (id,name) values(2,'ROLE_USER');
+insert into user_roles (role_id,user_id) values(2,2);
