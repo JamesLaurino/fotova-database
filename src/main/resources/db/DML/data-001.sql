@@ -5,10 +5,10 @@ insert into category_entity (id,name) values(1,"Laptop");
 insert into category_entity (id,name) values(2,"Tablette");
 insert into category_entity (id,name) values(3,"TV");
 
-insert into product_entity (id,name,price,quantity,category_id,url) values (1,'Dell i9',25.5,1,1,'photo Dell i9');
-insert into product_entity (id,name,price,quantity,category_id,url) values (2,'Lenovo i7',36.6,4,1,'photo Lenovo i7');
-insert into product_entity (id,name,price,quantity,category_id,url) values (3,'Pad m12',14.5,2,2,'photo Pad m12');
-insert into product_entity (id,name,price,quantity,category_id,url) values (4,'Samsung TV',78.5,3,3, 'photo Samsung');
+insert into product_entity (id,name,price,quantity,category_id,url) values (1,'Dell i9',25.5,8,1,'photo Dell i9');
+insert into product_entity (id,name,price,quantity,category_id,url) values (2,'Lenovo i7',36.6,9,1,'photo Lenovo i7');
+insert into product_entity (id,name,price,quantity,category_id,url) values (3,'Pad m12',14.5,10,2,'photo Pad m12');
+insert into product_entity (id,name,price,quantity,category_id,url) values (4,'Samsung TV',78.5,12,3, 'photo Samsung');
 
 insert into address_entity (id,street,city,number,country) values (1,'Avenue Ponty','Mons','15','Belgique');
 insert into address_entity (id,street,city,number,country) values (2,'Rue Boucher','Bruxelles','8','Belgique');
@@ -38,3 +38,7 @@ insert into comment_entity (id,header,body,create_at,update_at,client_id) values
 --changeset tpe:5
 insert into order_entity (id,client_id,create_at) values (1,1,now());
 insert into order_entity (id,client_id,create_at) values (2,2,now());
+
+--changeset tpe:6
+insert into order_product_entity (id,order_id,product_id,quantity_product)values(1,1,1,3);
+insert into order_product_entity (id,order_id,product_id,quantity_product) values(2,1,3,2);
