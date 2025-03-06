@@ -34,3 +34,7 @@ insert into user_roles (role_id,user_id) values(2,2);
 --changeset tpe:4
 insert into comment_entity (id,header,body,create_at,update_at,client_id) values(1,'Congratulation','Hello there',now(),now(),1);
 insert into comment_entity (id,header,body,create_at,update_at,client_id) values(2,'Bad Luck','Good by',now(),now(),1);
+
+--changeset tpe:5
+insert into order_entity (id,client_id,create_at) values (1,1,now());
+insert into order_entity (id,client_id,create_at) values (2,2,now());
