@@ -5,10 +5,10 @@ insert into category_entity (id,name) values(1,"Laptop");
 insert into category_entity (id,name) values(2,"Tablette");
 insert into category_entity (id,name) values(3,"TV");
 
-insert into product_entity (id,name,price,quantity,category_id,url) values (1,'Dell i9',25.5,8,1,'photo Dell i9');
-insert into product_entity (id,name,price,quantity,category_id,url) values (2,'Lenovo i7',36.6,9,1,'photo Lenovo i7');
-insert into product_entity (id,name,price,quantity,category_id,url) values (3,'Pad m12',14.5,10,2,'photo Pad m12');
-insert into product_entity (id,name,price,quantity,category_id,url) values (4,'Samsung TV',78.5,12,3, 'photo Samsung');
+insert into product_entity (id,name,price,quantity,category_id,url) values (1,'Dell i9',25.5,8,1,'Dell-i9.jpg');
+insert into product_entity (id,name,price,quantity,category_id,url) values (2,'Lenovo i7',36.6,9,1,'Lenovo-i7.jpg');
+insert into product_entity (id,name,price,quantity,category_id,url) values (3,'Pad m12',14.5,10,2,'Pad-m12.jpg');
+insert into product_entity (id,name,price,quantity,category_id,url) values (4,'Samsung TV',78.5,12,3, 'Samsung-tv.jpg');
 
 insert into address_entity (id,street,city,number,country) values (1,'Avenue Ponty','Mons','15','Belgique');
 insert into address_entity (id,street,city,number,country) values (2,'Rue Boucher','Bruxelles','8','Belgique');
