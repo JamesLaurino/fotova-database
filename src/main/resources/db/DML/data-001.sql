@@ -45,7 +45,7 @@ insert into order_product_entity (id,order_id,product_id,quantity_product) value
 
 --changeset tpe:7
 insert into image_entity (id,product_id,path) values(1,1,"test1.png");
-insert into image_entity (id,product_id,path) values(2,1,"test1.png");
+insert into image_entity (id,product_id,path) values(2,1,"test2.png");
 insert into image_entity (id,product_id,path) values(3,1,"test3.png");
 insert into image_entity (id,product_id,path) values(4,2,"test1.png");
 insert into image_entity (id,product_id,path) values(5,2,"test2.png");
