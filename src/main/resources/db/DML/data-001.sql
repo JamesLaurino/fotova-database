@@ -42,3 +42,13 @@ insert into order_entity (id,client_id,create_at) values (2,2,now());
 --changeset tpe:6
 insert into order_product_entity (id,order_id,product_id,quantity_product)values(1,1,1,3);
 insert into order_product_entity (id,order_id,product_id,quantity_product) values(2,1,3,2);
+
+--changeset tpe:7
+insert into image_entity (id,product_id,path) values(1,1,"test1.png");
+insert into image_entity (id,product_id,path) values(2,1,"test1.png");
+insert into image_entity (id,product_id,path) values(3,1,"test3.png");
+insert into image_entity (id,product_id,path) values(4,2,"test1.png");
+insert into image_entity (id,product_id,path) values(5,2,"test2.png");
+insert into image_entity (id,product_id,path) values(6,3,"test3.png");
+insert into image_entity (id,product_id,path) values(7,3,"test1.png");
+insert into image_entity (id,product_id,path) values(8,4,"test2.png");
