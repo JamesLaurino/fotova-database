@@ -38,10 +38,14 @@ insert into comment_entity (id,header,body,created_at,updated_at,client_id) valu
 --changeset tpe:5
 insert into order_entity (id,client_id,create_at) values (1,1,now());
 insert into order_entity (id,client_id,create_at) values (2,2,now());
+insert into order_entity (id,client_id,create_at) values (3,1,now());
 
 --changeset tpe:6
 insert into order_product_entity (id,order_id,product_id,quantity_product)values(1,1,1,3);
 insert into order_product_entity (id,order_id,product_id,quantity_product) values(2,1,3,2);
+insert into order_product_entity (id,order_id,product_id,quantity_product) values(3,2,1,1);
+insert into order_product_entity (id,order_id,product_id,quantity_product) values(4,3,1,1);
+insert into order_product_entity (id,order_id,product_id,quantity_product) values(5,3,2,1);
 
 --changeset tpe:7
 insert into image_entity (id,product_id,path) values(1,1,"test1.png");
