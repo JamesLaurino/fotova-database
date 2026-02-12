@@ -1,14 +1,15 @@
 --liquibase formatted sql
 
 --changeset tpe:1
-insert into category_entity (id,name) values(1,"Laptop");
-insert into category_entity (id,name) values(2,"Tablette");
-insert into category_entity (id,name) values(3,"TV");
+insert into category_entity (id,name) values(1,"Bonnet");
+insert into category_entity (id,name) values(2,"Gant");
+insert into category_entity (id,name) values(3,"Echarpe");
 
-insert into product_entity (id,name,price,quantity,category_id,url) values (1,'Dell i9',25.5,8,1,'Dell-i9.jpg');
-insert into product_entity (id,name,price,quantity,category_id,url) values (2,'Lenovo i7',36.6,9,1,'Lenovo-i7.jpg');
-insert into product_entity (id,name,price,quantity,category_id,url) values (3,'Pad m12',14.5,10,2,'Pad-m12.jpg');
-insert into product_entity (id,name,price,quantity,category_id,url) values (4,'Samsung TV',78.5,12,3, 'Samsung-tv.jpg');
+insert into product_entity (id,name,price,quantity,category_id,url) values (1,'Bonnet rouge',25.5,8,1,'bonnet_rouge_1.jpg');
+insert into product_entity (id,name,price,quantity,category_id,url) values (2,'Bonnet orange',36.6,9,1,'bonnet_orange_1.jpg');
+insert into product_entity (id,name,price,quantity,category_id,url) values (3,'Bonnet mauve',36.6,9,1,'bonnet_mauve_1.jpg');
+insert into product_entity (id,name,price,quantity,category_id,url) values (4,'Gant noir',14.5,10,2,'gant_noir_1.png');
+insert into product_entity (id,name,price,quantity,category_id,url) values (5,'Echarpe rouge',78.5,12,3, 'echarpe_rouge_1.png');
 
 insert into address_entity (id,street,city,number,country) values (1,'Avenue Ponty','Mons','15','Belgique');
 insert into address_entity (id,street,city,number,country) values (2,'Rue Boucher','Bruxelles','8','Belgique');
@@ -48,11 +49,12 @@ insert into order_product_entity (id,order_id,product_id,quantity_product) value
 insert into order_product_entity (id,order_id,product_id,quantity_product) values(5,3,2,1);
 
 --changeset tpe:7
-insert into image_entity (id,product_id,path) values(1,1,"test1.png");
-insert into image_entity (id,product_id,path) values(2,1,"test2.png");
-insert into image_entity (id,product_id,path) values(3,1,"test3.png");
-insert into image_entity (id,product_id,path) values(4,2,"test1.png");
-insert into image_entity (id,product_id,path) values(5,2,"test2.png");
-insert into image_entity (id,product_id,path) values(6,3,"test3.png");
-insert into image_entity (id,product_id,path) values(7,3,"test1.png");
-insert into image_entity (id,product_id,path) values(8,4,"test2.png");
+insert into image_entity (id,product_id,path) values(1,1,'bonnet_rouge_2.jpg');
+insert into image_entity (id,product_id,path) values(2,1,'bonnet_rouge_3.jpg');
+insert into image_entity (id,product_id,path) values(3,1,'bonnet_rouge_4.jpg');
+insert into image_entity (id,product_id,path) values(4,2,'bonnet_orange_2.jpg');
+insert into image_entity (id,product_id,path) values(5,2,'bonnet_orange_3.jpg');
+insert into image_entity (id,product_id,path) values(6,3,'bonnet_mauve_2.jpg');
+insert into image_entity (id,product_id,path) values(7,3,'bonnet_mauve_3.jpg');
+insert into image_entity (id,product_id,path) values(8,4,'gant_noir_2.png');
+insert into image_entity (id,product_id,path) values(9,5,'echarpe_rouge_2.png');
