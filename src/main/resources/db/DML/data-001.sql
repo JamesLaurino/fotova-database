@@ -5,11 +5,11 @@ insert into category_entity (id,name) values(1,"Bonnet");
 insert into category_entity (id,name) values(2,"Gant");
 insert into category_entity (id,name) values(3,"Echarpe");
 
-insert into product_entity (id,name,price,quantity,category_id,url) values (1,'Bonnet rouge',25.5,8,1,'bonnet_rouge_1.jpg');
-insert into product_entity (id,name,price,quantity,category_id,url) values (2,'Bonnet orange',36.6,9,1,'bonnet_orange_1.jpg');
-insert into product_entity (id,name,price,quantity,category_id,url) values (3,'Bonnet mauve',36.6,9,1,'bonnet_mauve_1.jpg');
-insert into product_entity (id,name,price,quantity,category_id,url) values (4,'Gant noir',14.5,10,2,'gant_noir_1.png');
-insert into product_entity (id,name,price,quantity,category_id,url) values (5,'Echarpe rouge',78.5,12,3, 'echarpe_rouge_1.png');
+insert into product_entity (id,name,price,quantity,category_id,url,description) values (1,'Bonnet rouge',25.5,8,1,'bonnet_rouge_1.jpg','Un beau bonnet rouge');
+insert into product_entity (id,name,price,quantity,category_id,url,description) values (2,'Bonnet orange',36.6,9,1,'bonnet_orange_1.jpg', 'Un beau bonnet orange');
+insert into product_entity (id,name,price,quantity,category_id,url,description) values (3,'Bonnet mauve',36.6,9,1,'bonnet_mauve_1.jpg','Un beau bonnet mauve' );
+insert into product_entity (id,name,price,quantity,category_id,url,description) values (4,'Gant noir',14.5,10,2,'gant_noir_1.png', 'Un beau gant noir');
+insert into product_entity (id,name,price,quantity,category_id,url,description) values (5,'Echarpe rouge',78.5,12,3, 'echarpe_rouge_1.png','Un belle echarpe rouge');
 
 insert into address_entity (id,street,city,number,country) values (1,'Avenue Ponty','Mons','15','Belgique');
 insert into address_entity (id,street,city,number,country) values (2,'Rue Boucher','Bruxelles','8','Belgique');
