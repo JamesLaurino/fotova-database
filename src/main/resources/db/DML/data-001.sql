@@ -58,3 +58,10 @@ insert into image_entity (id,product_id,path) values(6,3,'bonnet_mauve_2.jpg');
 insert into image_entity (id,product_id,path) values(7,3,'bonnet_mauve_3.jpg');
 insert into image_entity (id,product_id,path) values(8,4,'gant_noir_2.png');
 insert into image_entity (id,product_id,path) values(9,5,'echarpe_rouge_2.png');
+
+--changeset tpe:8
+insert into label_entity (id,product_id,title_fr,title_en,title_ru,description_fr,description_en,description_ru) values (id,1,'Bonnet rouge','Red hat','красная шляп','Un beau bonnet rouge','A beautifully red hat', 'Красивая красная шляпа');
+insert into label_entity (id,product_id,title_fr,title_en,title_ru,description_fr,description_en,description_ru) values (id,2,'Bonnet orange','Orange hat','оранжевая шляпа','Un beau bonnet orange','A beautifully orange hat', 'Красивая оранжевая шляпа');
+insert into label_entity (id,product_id,title_fr,title_en,title_ru,description_fr,description_en,description_ru) values (id,3,'Bonnet mauve','Mauve hat','сиреневого цвета','Un beau bonnet mauve','A beautifully mauve hat', 'Красивая шляпа сиреневого цвета');
+insert into label_entity (id,product_id,title_fr,title_en,title_ru,description_fr,description_en,description_ru) values (id,4,'Gant noir','Black glove','Черная перчатка','Des beau gants noir','A beautifull Black glove', 'Красивая Черная перчатка');
+insert into label_entity (id,product_id,title_fr,title_en,title_ru,description_fr,description_en,description_ru) values (id,5,'Écharpe rouge','Red scarf','Красный шарф','Une belle écharpe rouge','A beautifull red scarf', 'Красивая Красный шарф');
