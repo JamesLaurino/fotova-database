@@ -11,11 +11,11 @@ insert into product_entity (id,name,price,quantity,category_id,url,description) 
 insert into product_entity (id,name,price,quantity,category_id,url,description) values (4,'Gant noir',14,10,2,'gant_noir_1.png', 'Un beau gant noir');
 insert into product_entity (id,name,price,quantity,category_id,url,description) values (5,'Echarpe rouge',78,12,3, 'echarpe_rouge_1.png','Un belle echarpe rouge');
 
-insert into address_entity (id,street,city,number,country) values (1,'Avenue Ponty','Mons','15','BELGIQUE');
-insert into address_entity (id,street,city,number,country) values (2,'Rue Boucher','Bruxelles','8','BELGIQUE');
+insert into address_entity (id,street,city,number,country) values (1,'Avenue Ponty','Mons','15','BELGIUM');
+insert into address_entity (id,street,city,number,country) values (2,'Rue Boucher','Bruxelles','8','BELGIUM');
 insert into address_entity (id,street,city,number,country) values (3,'Rue Merlot','Nice','2','FRANCE');
 insert into address_entity (id,street,city,number,country) values (4,'Rue Poincon','Paris','26','FRANCE');
-insert into address_entity (id,street,city,number,country) values (5,'Rue Seige-gang','Zimbaboue','6','CROATIE');
+insert into address_entity (id,street,city,number,country) values (5,'Rue Seige-gang','Zimbaboue','6','CROATIA');
 
 insert into supplier_entity (id,address_id,product_id,registration_number) values(1,3,1,'0123456789');
 insert into supplier_entity (id,address_id,product_id,registration_number) values(2,4,2,'123456');
