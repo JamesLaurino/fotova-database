@@ -22,14 +22,14 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(
                     credentialsId: 'mysql-fotova',
-                    usernameVariable: 'DB_USER',
-                    passwordVariable: 'DB_PASSAWORD'
+                    usernameVariable: 'DB_USERNAME',
+                    passwordVariable: 'DB_PASSWORD'
                 )]) {
                     sh """
                     mvn liquibase:dropAll \
                     -Dliquibase.url=jdbc:mysql://localhost:3306/fotova_db_dev \
-                    -Dliquibase.username=$DB_USER \
-                    -Dliquibase.password=$DB_PASSAWORD
+                    -Dliquibase.username=$DB_USERNAME \
+                    -Dliquibase.password=$DB_PASSWORD
                     """
                 }
             }
@@ -39,14 +39,14 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(
                     credentialsId: 'mysql-fotova',
-                    usernameVariable: 'DB_USER',
-                    passwordVariable: 'DB_PASSAWORD'
+                    usernameVariable: 'DB_USERNAME',
+                    passwordVariable: 'DB_PASSWORD'
                 )]) {
                     sh """
                     mvn liquibase:update \
                     -Dliquibase.url=jdbc:mysql://localhost:3306/fotova_db_dev \
-                    -Dliquibase.username=$DB_USER \
-                    -Dliquibase.password=$DB_PASSAWORD \
+                    -Dliquibase.username=$DB_USERNAME \
+                    -Dliquibase.password=$DB_PASSWORD \
                     -Dliquibase.changeLogFile=src/main/resources/db/changelog-master.xml
                     """
                 }
