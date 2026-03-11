@@ -27,7 +27,7 @@ pipeline {
                 )]) {
                     sh """
                     mvn liquibase:dropAll \
-                    -Dliquibase.url=jdbc:mysql://localhost:3306/fotova_db_dev \
+                    -Dliquibase.url=jdbc:mysql://10.0.0.1:3306/fotova_db_dev \
                     -Dliquibase.username=$DB_USERNAME \
                     -Dliquibase.password=$DB_PASSWORD
                     """
@@ -44,7 +44,7 @@ pipeline {
                 )]) {
                     sh """
                     mvn liquibase:update \
-                    -Dliquibase.url=jdbc:mysql://localhost:3306/fotova_db_dev \
+                    -Dliquibase.url=jdbc:mysql://10.0.0.1:3306/fotova_db_dev \
                     -Dliquibase.username=$DB_USERNAME \
                     -Dliquibase.password=$DB_PASSWORD \
                     -Dliquibase.changeLogFile=src/main/resources/db/changelog-master.xml
