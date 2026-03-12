@@ -35,13 +35,6 @@ pipeline {
                 ]) {
 
                     sh """
-                    mvn liquibase:dropAll \
-                      -Dliquibase.url=jdbc:mysql://$DB_HOST:$DB_PORT/$DB_NAME \
-                      -Dliquibase.username=$DB_USERNAME \
-                      -Dliquibase.password=$DB_PASSWORD
-                    """
-
-                    sh """
                     mvn liquibase:update \
                       -Dliquibase.url=jdbc:mysql://$DB_HOST:$DB_PORT/$DB_NAME \
                       -Dliquibase.username=$DB_USERNAME \
