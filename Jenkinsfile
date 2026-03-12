@@ -1,4 +1,5 @@
 pipeline {
+
     agent any
 
     tools {
@@ -6,6 +7,7 @@ pipeline {
     }
 
     stages {
+
         stage('Checkout') {
             steps {
                 git 'https://github.com/JamesLaurino/fotova-database.git'
@@ -14,23 +16,39 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                sh 'mvn -B clean install'
             }
         }
-        stage('Liquibase Update') {
+
+        stage('Liquibase Migration') {
+
             steps {
-                withCredentials([usernamePassword(
-                    credentialsId: 'mysql-fotova',
-                    usernameVariable: 'DB_USERNAME',
-                    passwordVariable: 'DB_PASSWORD'
-                )]) {
+
+                withCredentials([
+
+                    string(credentialsId: 'DB_HOST', variable: 'DB_HOST'),
+                    string(credentialsId: 'DB_PORT', variable: 'DB_PORT'),
+                    string(credentialsId: 'DB_NAME', variable: 'DB_NAME'),
+                    string(credentialsId: 'DB_USERNAME', variable: 'DB_USERNAME'),
+                    string(credentialsId: 'DB_PASSWORD', variable: 'DB_PASSWORD')
+
+                ]) {
+
+                    sh """
+                    mvn liquibase:dropAll \
+                      -Dliquibase.url=jdbc:mysql://$DB_HOST:$DB_PORT/$DB_NAME \
+                      -Dliquibase.username=$DB_USERNAME \
+                      -Dliquibase.password=$DB_PASSWORD
+                    """
+
                     sh """
                     mvn liquibase:update \
-                    -Dliquibase.url=jdbc:mysql://10.0.0.1:3306/fotova_db_dev \
-                    -Dliquibase.username=$DB_USERNAME \
-                    -Dliquibase.password=$DB_PASSWORD \
-                    -Dliquibase.changeLogFile=src/main/resources/db/changelog-master.xml
+                      -Dliquibase.url=jdbc:mysql://$DB_HOST:$DB_PORT/$DB_NAME \
+                      -Dliquibase.username=$DB_USERNAME \
+                      -Dliquibase.password=$DB_PASSWORD \
+                      -Dliquibase.changeLogFile=src/main/resources/db/changelog-master.xml
                     """
+
                 }
             }
         }
