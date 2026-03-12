@@ -17,24 +17,6 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-
-        stage('Liquibase DropAll') {
-            steps {
-                withCredentials([usernamePassword(
-                    credentialsId: 'mysql-fotova',
-                    usernameVariable: 'DB_USERNAME',
-                    passwordVariable: 'DB_PASSWORD'
-                )]) {
-                    sh """
-                    mvn liquibase:dropAll \
-                    -Dliquibase.url=jdbc:mysql://10.0.0.1:3306/fotova_db_dev \
-                    -Dliquibase.username=$DB_USERNAME \
-                    -Dliquibase.password=$DB_PASSWORD
-                    """
-                }
-            }
-        }
-
         stage('Liquibase Update') {
             steps {
                 withCredentials([usernamePassword(
