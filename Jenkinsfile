@@ -40,14 +40,14 @@ pipeline {
                     }
 
                     withCredentials([
-                        string(credentialsId: 'DB_HOST', variable: 'DB_HOST'),
+                        string(credentialsId: 'SERVER_HOST', variable: 'SERVER_HOST'),
                         string(credentialsId: 'DB_NAME', variable: 'DB_NAME'),
                         string(credentialsId: 'DB_USERNAME', variable: 'DB_USERNAME'),
                         string(credentialsId: 'DB_PASSWORD', variable: 'DB_PASSWORD')
                     ]) {
                         sh """
                         mvn liquibase:update \
-                          -Dliquibase.url=jdbc:mysql://$DB_HOST:3306/$DB_NAME \
+                          -Dliquibase.url=jdbc:mysql://$SERVER_HOST:3306/$DB_NAME \
                           -Dliquibase.username=$DB_USERNAME \
                           -Dliquibase.password=$DB_PASSWORD \
                           -Dliquibase.changeLogFile=${changelogFile}
