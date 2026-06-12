@@ -51,11 +51,8 @@ insert into order_product_entity (id,order_id,product_id,quantity_product) value
 --changeset tpe:7
 insert into image_entity (id,product_id,path) values(1,1,'bonnet_rouge_2.jpg');
 insert into image_entity (id,product_id,path) values(2,1,'bonnet_rouge_3.jpg');
-insert into image_entity (id,product_id,path) values(3,1,'bonnet_rouge_4.jpg');
 insert into image_entity (id,product_id,path) values(4,2,'bonnet_orange_2.jpg');
-insert into image_entity (id,product_id,path) values(5,2,'bonnet_orange_3.jpg');
 insert into image_entity (id,product_id,path) values(6,3,'bonnet_mauve_2.jpg');
-insert into image_entity (id,product_id,path) values(7,3,'bonnet_mauve_3.jpg');
 insert into image_entity (id,product_id,path) values(8,4,'gant_noir_2.png');
 insert into image_entity (id,product_id,path) values(9,5,'echarpe_rouge_2.png');
 
